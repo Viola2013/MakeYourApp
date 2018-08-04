@@ -140,7 +140,6 @@ public class ArticleDetailFragment extends Fragment implements LoaderManager.Loa
             }
         });
 
-        bindViews();
         updateStatusBar();
         return mRootView;
     }
@@ -207,7 +206,9 @@ public class ArticleDetailFragment extends Fragment implements LoaderManager.Loa
 
             //Body
             mArticleBody = mCursor.getString(ArticleLoader.Query.BODY);
-            bodyView.setText(Html.fromHtml(mArticleBody));
+            bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)
+                    .substring(0,1000)
+                    .replaceAll("(\r\n|\n)", "<br />")));
 
             //Image
             ImageLoaderHelper.getInstance(getActivity()).getImageLoader()

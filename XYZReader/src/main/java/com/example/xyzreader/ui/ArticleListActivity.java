@@ -33,7 +33,6 @@ import butterknife.BindView;
  */
 public class ArticleListActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
-    @BindView(R.id.toolbar) Toolbar mToolbar;
     @BindView(R.id.swipe_refresh_layout) SwipeRefreshLayout mSwipeRefreshLayout;
     @BindView (R.id.recycler_view) RecyclerView mRecyclerView;
 
@@ -43,6 +42,8 @@ public class ArticleListActivity extends AppCompatActivity implements LoaderMana
         setContentView(R.layout.activity_article_list);
         // bind the view using butterknife
         ButterKnife.bind(this);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(myToolbar);
 
         getLoaderManager().initLoader(0, null, this);
 
