@@ -1,1 +1,1 @@
-This is my version of the XYZ reader based on the udacity starter code. 
+This is my version of the XYZ reader based on the udacity starter code on Android developer track on Udacity nanodegree 
