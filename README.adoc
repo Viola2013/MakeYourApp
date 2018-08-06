@@ -1,1 +1,2 @@
 This is my version of the XYZ reader based on the udacity starter code on Android developer track on Udacity nanodegree 
+In this project, you will redesign an app to follow the Material Design guidelines and translate a set of static design mocks to a living and breathing app.
